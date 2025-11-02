@@ -3,7 +3,7 @@ import crypto from "crypto";
 import { exec } from "child_process";
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config({ path: '../.env' });
 
 const app = express();
 app.use(express.json({ verify: (req, res, buf) => (req.rawBody = buf) }));
