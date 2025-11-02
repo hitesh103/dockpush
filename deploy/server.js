@@ -42,7 +42,7 @@ app.post("/webhook", (req, res) => {
 
   console.log("🚀 Starting deployment for test branch...");
 
-  exec("bash ./deploy/deploy.sh", (error, stdout, stderr) => {
+  exec("bash /deploy.sh", (error, stdout, stderr) => {
     if (error) {
       console.error(`❌ Deploy error: ${error.message}`);
       return res.status(500).send("Deployment failed");
